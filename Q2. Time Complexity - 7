@@ -1,0 +1,24 @@
+Q2. Time Complexity - 7
+
+What is the time complexity of the following code snippet?
+
+int function (int n){
+if(n%2 == 0 ) return 0;
+return function(n-1) + function(Math.floor(n/2));
+}
+
+
+Choose the correct answer from below:
+A) O(n)
+B) O(logn)
+C) O(1)
+D) None of these
+E) O(n^2)
+
+Ans : B) O(logn)
+
+Explaination : In the code we have recursion, and in recursion we call n-1 and calling it by n/2. So when the function of n-1 will get call, the number will become even for sure in 2 calls, so it will return 0 and in case of n//2, we kept dividing by 2. Until it becomes even, but we don't know when it becomes even, so lets consider the worst case time complexity, it will be log(n), as n is exponentially divided by 2.
+
+or simply ,The floor function will always result an odd number if the number is 2 power k−1
+  .
+Hence the time complexity will be o(logn)
